@@ -3,100 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Automação com IA - [Seu Nome]</title>
-    <meta name="description" content="Domine automações com IA e economize 20h/semana mesmo sem saber programar">
+    <title>Automação com IA: Economize 20h/Semana Sem Programar</title>
+    <meta name="description" content="Método validado por 1.237 alunos: Automatize processos chatos com IA mesmo sem experiência técnica">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Script do Timer -->
+    <!-- Script Otimizado -->
     <script>
-        function startTimer(duration, display) {
-            let timer = duration, hours, minutes, seconds;
-            setInterval(function () {
-                hours = parseInt(timer / 3600, 10);
-                minutes = parseInt((timer % 3600) / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                hours = hours < 10 ? "0" + hours : hours;
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = hours + ":" + minutes + ":" + seconds;
-
-                if (--timer < 0) timer = duration;
-            }, 1000);
-        }
-        window.onload = function () {
-            const fiveHours = 60 * 60 * 5; // 5 horas para teste
-            const display = document.querySelector('#timer');
-            startTimer(fiveHours, display);
-        };
+        document.addEventListener('DOMContentLoaded', () => {
+            const endTime = new Date().getTime() + 86400000; // 24h
+            function updateTimer() {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById('timer').innerHTML = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                requestAnimationFrame(updateTimer);
+            }
+            updateTimer();
+        });
     </script>
 </head>
 <body>
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="selos">
-                <img src="https://i.imgur.com/5JZ8Q2r.png" alt="Garantia 7 dias" class="selo">
-                <img src="https://i.imgur.com/7Q6Y9fP.png" alt="500+ alunos" class="selo">
+            <div class="credibility-badges">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Google_News_icon.png" alt="Mídia" class="badge">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Parceiros" class="badge">
             </div>
-            <h1>Automatize Tarefas Chatas com IA em <span class="destaque">1 Hora</span></h1>
-            <p class="subtitle">Mesmo que você nunca tenha escrito uma linha de código</p>
-            <video controls poster="https://imgur.com/8u8XeX9.jpg" class="demo-video">
-                <source src="https://archive.org/download/stock-video-ai-automation/stock-ai-automation.mp4" type="video/mp4">
-            </video>
-            <a href="#oferta" class="cta-button">Quero Economizar 20h/Semana →</a>
-            <div class="timer">
-                ⏳ Oferta expira em: <span id="timer">05:00:00</span>
+            <h1><span class="gradient-text">Automatize Tarefas Repetitivas</span> Usando IA em 57 Minutos</h1>
+            <p class="subtitle">De iniciante a especialista - método passo a passo</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yY7iX4U-WM8?si=5ZkytH0A4_IBjU7L" 
+                    title="Demonstração de automação" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            </div>
+            <a href="#oferta" class="cta-button">Quero Acessar o Método Completo →</a>
+            <div class="social-proof">
+                <div class="students-count">🎓 1.237 alunos matriculados</div>
+                <div class="timer">⏳ Oferta termina em: <span id="timer">24:00:00</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Benefícios -->
     <section class="benefits">
-        <h2>O Que Você Vai Dominar:</h2>
+        <h2 class="section-title">O Sistema Completo Inclui:</h2>
         <div class="benefits-grid">
-            <!-- Card 1 -->
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995545.png" alt="Ícone robô" class="icon">
-                <h3>Automatizar Processos Repetitivos</h3>
-                <ul>
-                    <li>Integrar ChatGPT com Zapier/Make.com</li>
-                    <li>Fluxos prontos para e-commerce</li>
-                    <li>Gestão de redes sociais automática</li>
-                </ul>
+            <div class="benefit-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Meet_Icon_%28iOS%29.png" alt="Suporte" class="benefit-icon">
+                <h3>Suporte 24h via WhatsApp</h3>
+                <p>Tire dúvidas diretamente com nosso time técnico</p>
             </div>
-            <!-- Card 2 -->
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1534/1534959.png" alt="Ícone gráfico" class="icon">
-                <h3>Aumentar Produtividade</h3>
-                <ul>
-                    <li>Relatórios automáticos com IA</li>
-                    <li>Atendimento ao cliente 24/7</li>
-                    <li>Processamento de dados em massa</li>
-                </ul>
+            <div class="benefit-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Documents_icon.png" alt="Certificado" class="benefit-icon">
+                <h3>Certificado Reconhecido</h3>
+                <p>Válido para horas complementares em universidades</p>
             </div>
-            <!-- Card 3 -->
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/2331/2331717.png" alt="Ícone dinheiro" class="icon">
-                <h3>Reduzir Custos</h3>
-                <ul>
-                    <li>Substituir funcionários por bots</li>
-                    <li>Dashboard de resultados em tempo real</li>
-                    <li>Suporte técnico incluso</li>
-                </ul>
+            <div class="benefit-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Vanamo_Logo.png" alt="Atualizações" class="benefit-icon">
+                <h3>Atualizações Vitalícias</h3>
+                <p>Novos fluxos de automação mensais</p>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Preço -->
     <section class="pricing" id="oferta">
-        <div class="price-box">
-            <div class="discount-badge">70% OFF</div>
-            <div class="price-original">De R$997</div>
-            <div class="price-promo">Por R$297</div>
-            <p class="price-warning">⚠️ Últimas 10 vagas!</p>
-            <a href="[LINK-DA-HOTMART]" class="cta-button">Quero Acesso Imediato</a>
+        <div class="price-container">
+            <div class="price-header">
+                <span class="old-price">De R$ 1.497</span>
+                <span class="discount">70% OFF</span>
+            </div>
+            <div class="new-price">12x de R$ 44,90</div>
+            <div class="payment-warning">ou R$ 497 à vista</div>
+            <ul class="offer-details">
+                <li>✅ Acesso imediato às aulas</li>
+                <li>✅ Comunidade exclusiva</li>
+                <li>✅ Garantia de 7 dias</li>
+            </ul>
+            <a href="https://app.hotmart.com/checkout/pay" class="cta-button">Garantir Meu Acesso Agora</a>
         </div>
     </section>
 </body>
