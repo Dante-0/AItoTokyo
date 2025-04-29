@@ -24,12 +24,14 @@
             }
             updateTimer();
 
-            // Student counter animation (+5 students every 3s)
+            // Persistent student counter (+5 every 3s)
             const countEl = document.getElementById('studentCount');
-            let count = parseInt(countEl.textContent.replace(/,/g, ''), 10);
+            let count = parseInt(localStorage.getItem('studentCount'), 10) || 1237;
+            countEl.textContent = count.toLocaleString();
             setInterval(() => {
-                count += 2;
+                count += 5;
                 countEl.textContent = count.toLocaleString();
+                localStorage.setItem('studentCount', count);
             }, 3000);
         });
     </script>
@@ -39,7 +41,7 @@
         <div class="hero-content">
             <div class="credibility-badges">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Google_News_icon.png" alt="Media" class="badge">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Partner" class="badge">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Partner" class="badge">
             </div>
             <h1><span class="gradient-text">Automate Repetitive Tasks</span> Using AI in 57 Minutes</h1>
             <p class="subtitle">From Beginner to Expert – Step-by-Step Method</p>
@@ -50,10 +52,12 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
             </div>
-            <!-- AI-built indicator -->
+            <!-- AI-built indicator with images -->
             <div class="ai-built">
-                <img src="https://images.pexels.com/photos/5473953/pexels-photo-5473953.jpeg?auto=compress&cs=tinysrgb&w=1440" 
-                     alt="Robot building application" class="ai-built-img">
+                <img src="https://cdn.pixabay.com/photo/2024/04/19/08/10/ai-generated-web-design-8704037_1280.jpg" 
+                     alt="Robot coding website" class="ai-built-img">
+                <img src="https://cdn.pixabay.com/photo/2024/09/27/14/20/ai-generated-money-robot-finance-9073433.png" 
+                     alt="AI Robot Generating Money" class="ai-built-img">
                 <p class="ai-built-text">This page was built entirely by Artificial Intelligence</p>
             </div>
             <a href="#offer" class="cta-button">Get Full Access to the Method →</a>
@@ -86,14 +90,14 @@
                 <p>Monthly new automation workflows</p>
             </div>
             <div class="benefit-card">
-                <img src="https://images.pexels.com/photos/110854/pexels-photo-110854.jpeg?auto=compress&cs=tinysrgb&w=100" 
-                     alt="Trophy" class="benefit-icon">
+                <img src="https://cdn.pixabay.com/photo/2024/04/19/08/10/ai-generated-web-design-8704037_1280.jpg" 
+                     alt="Recognized Authority" class="benefit-icon">
                 <h3>Recognized Authority</h3>
                 <p>Endorsed by AI industry experts</p>
             </div>
             <div class="benefit-card">
-                <img src="https://images.pexels.com/photos/3184472/pexels-photo-3184472.jpeg?auto=compress&cs=tinysrgb&w=100" 
-                     alt="Handshake" class="benefit-icon">
+                <img src="https://cdn.pixabay.com/photo/2024/09/27/14/20/ai-generated-money-robot-finance-9073433.png" 
+                     alt="Trusted Partnerships" class="benefit-icon">
                 <h3>Trusted Partnerships</h3>
                 <p>Partnered with industry leaders</p>
             </div>
