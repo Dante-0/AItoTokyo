@@ -17,7 +17,7 @@
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                document.getElementById('timer').innerHTML = 
+                document.getElementById('timer').innerHTML =
                 `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                 requestAnimationFrame(updateTimer);
             }
@@ -34,11 +34,17 @@
             </div>
             <h1><span class="gradient-text">Automatize Tarefas Repetitivas</span> Usando IA em 57 Minutos</h1>
             <p class="subtitle">De iniciante a especialista - método passo a passo</p>
+            <!-- Nova seção: vídeo público sobre automação de conteúdo -->
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yY7iX4U-WM8?si=5ZkytH0A4_IBjU7L" 
-                    title="Demonstração de automação" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/duGOA6ZiGtE"
+                    title="How I Use AI to Automate Content Creation" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
+            </div>
+            <!-- Nova seção: página criada por IA -->
+            <div class="ai-built">
+                <img src="https://source.unsplash.com/_7lbxV7dgIM/900x400" alt="Robô montando aplicação" class="ai-built-img">
+                <p class="ai-built-text">Esta página foi criada 100% por Inteligência Artificial</p>
             </div>
             <a href="#oferta" class="cta-button">Quero Acessar o Método Completo →</a>
             <div class="social-proof">
@@ -65,6 +71,17 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Vanamo_Logo.png" alt="Atualizações" class="benefit-icon">
                 <h3>Atualizações Vitalícias</h3>
                 <p>Novos fluxos de automação mensais</p>
+            </div>
+            <!-- Novo: Autoridade e confiança -->
+            <div class="benefit-card">
+                <img src="https://source.unsplash.com/YQ3_xq4VWNM/100x100" alt="Troféu" class="benefit-icon">
+                <h3>Autoridade Reconhecida</h3>
+                <p>Reconhecido por especialistas do mercado de IA</p>
+            </div>
+            <div class="benefit-card">
+                <img src="https://source.unsplash.com/gOez03tUGCc/100x100" alt="Confiança" class="benefit-icon">
+                <h3>Confiança Garantida</h3>
+                <p>Parcerias com líderes e clientes satisfeitos</p>
             </div>
         </div>
     </section>
