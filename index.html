@@ -3,42 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automação com IA: Economize 20h/Semana Sem Programar</title>
-    <meta name="description" content="Método validado por 1.237 alunos: Automatize processos chatos com IA mesmo sem experiência técnica">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Script Otimizado -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const endTime = new Date().getTime() + 86400000; // 24h
-            function updateTimer() {
-                const now = new Date().getTime();
-                const distance = endTime - now;
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                document.getElementById('timer').innerHTML = 
-                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                requestAnimationFrame(updateTimer);
-            }
-            updateTimer();
-        });
-    </script>
+    <title>Automação com IA: Método Comprovado</title>
+    <style>
+        :root {
+            --azul-profundo: #0F4C81;
+            --dourado: #FFD700;
+            --laranja: #FF6B35;
+            --sombra: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--azul-profundo), #1a365d);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .icone {
+            width: 60px;
+            height: 60px;
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            margin: 0 auto;
+            box-shadow: var(--sombra);
+        }
+
+        .video-wrapper {
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--laranja);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: transform 0.3s;
+            margin: 1.5rem 0;
+        }
+
+        .cta:hover {
+            transform: translateY(-3px);
+        }
+
+        .beneficios {
+            display: grid;
+            gap: 2rem;
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--sombra);
+        }
+    </style>
 </head>
 <body>
     <section class="hero">
-        <div class="hero-content">
-            <div class="credibility-badges">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Google_News_icon.png" alt="Mídia" class="badge">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Parceiros" class="badge">
-            </div>
-            <h1><span class="gradient-text">Automatize Tarefas Repetitivas</span> Usando IA em 57 Minutos</h1>
-            <p class="subtitle">De iniciante a especialista - método passo a passo</p>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yY7iX4U-WM8?si=5ZkytH0A4_IBjU7L" 
-                    title="Demonstração de automação" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        <div class="icone">🤖</div>
+        <h1>Automatize Tarefas Repetitivas com IA em 1 Hora</h1>
+        <p>Mesmo sem conhecimento técnico prévio</p>
+        
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ?controls=1" 
+                    title="Tutorial de automação" 
+                    allow="accelerometer; autoplay; encrypted-media" 
                     allowfullscreen></iframe>
+        </div>
+
+        <a href="#oferta" class="cta">Quero Aprender Agora →</a>
+    </section>
+
+    <section class="beneficios">
+        <div class="card">
+            <div class="icone">⚡</div>
+            <h3>Fluxos Prontos</h3>
+            <p>Modelos de automação para e-commerce e redes sociais</p>
+        </div>
+        
+        <div class="card">
+            <div class="icone">🛡️</div>
+            <h3>Garantia Total</h3>
+            <p>7 dias para testar ou devolvemos seu dinheiro</p>
+        </div>
+        
+        <div class="card">
+            <div class="icone">🎓</div>
+            <h3>Certificado</h3>
+            <p>Válido como horas complementares</p>
+        </div>
+    </section>
+</body>
+</html>
             </div>
             <a href="#oferta" class="cta-button">Quero Acessar o Método Completo →</a>
             <div class="social-proof">
