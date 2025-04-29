@@ -7,26 +7,18 @@
     <meta name="description" content="Método validado por 1.237 alunos: Automatize processos chatos com IA mesmo sem experiência técnica">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Script Timer Otimizado -->
+    <!-- Script Otimizado -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const endTime = Date.now() + 86400000; // 24h
+            const endTime = new Date().getTime() + 86400000; // 24h
             function updateTimer() {
-                const now = Date.now();
-                const diff = endTime - now;
-                
-                if(diff <= 0) {
-                    document.getElementById('timer').textContent = "00:00:00";
-                    return;
-                }
-
-                const hours = Math.floor(diff / 3600000);
-                const minutes = Math.floor((diff % 3600000) / 60000);
-                const seconds = Math.floor((diff % 60000) / 1000);
-
-                document.getElementById('timer').textContent = 
-                    `${String(hours).padStart(2,'0')}:${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
-
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById('timer').innerHTML = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                 requestAnimationFrame(updateTimer);
             }
             updateTimer();
@@ -37,20 +29,16 @@
     <section class="hero">
         <div class="hero-content">
             <div class="credibility-badges">
-                <img src="https://www.gstatic.com/images/branding/product/2x/news_512dp.png" 
-                     alt="Mídia" 
-                     class="badge">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Amazon_icon.png" 
-                     alt="Parceiros" 
-                     class="badge">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Google_News_icon.png" alt="Mídia" class="badge">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Parceiros" class="badge">
             </div>
             <h1><span class="gradient-text">Automatize Tarefas Repetitivas</span> Usando IA em 57 Minutos</h1>
             <p class="subtitle">De iniciante a especialista - método passo a passo</p>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" 
-                        title="Demonstração de Automação com IA" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yY7iX4U-WM8?si=5ZkytH0A4_IBjU7L" 
+                    title="Demonstração de automação" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
             </div>
             <a href="#oferta" class="cta-button">Quero Acessar o Método Completo →</a>
             <div class="social-proof">
@@ -64,23 +52,17 @@
         <h2 class="section-title">O Sistema Completo Inclui:</h2>
         <div class="benefits-grid">
             <div class="benefit-card">
-                <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/whatsapp.svg" 
-                     alt="Suporte" 
-                     class="benefit-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Meet_Icon_%28iOS%29.png" alt="Suporte" class="benefit-icon">
                 <h3>Suporte 24h via WhatsApp</h3>
                 <p>Tire dúvidas diretamente com nosso time técnico</p>
             </div>
             <div class="benefit-card">
-                <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/file-certificate.svg" 
-                     alt="Certificado" 
-                     class="benefit-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Documents_icon.png" alt="Certificado" class="benefit-icon">
                 <h3>Certificado Reconhecido</h3>
                 <p>Válido para horas complementares em universidades</p>
             </div>
             <div class="benefit-card">
-                <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/arrows-rotate.svg" 
-                     alt="Atualizações" 
-                     class="benefit-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Vanamo_Logo.png" alt="Atualizações" class="benefit-icon">
                 <h3>Atualizações Vitalícias</h3>
                 <p>Novos fluxos de automação mensais</p>
             </div>
