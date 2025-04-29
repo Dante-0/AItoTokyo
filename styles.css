@@ -2,3 +2,41 @@ body {
     background-color: #0F4C81;
     color: white;
 }
+.hero {
+    background: linear-gradient(135deg, #0F4C81 0%, #2B5876 100%);
+    text-align: center;
+    padding: 4rem 1rem;
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.destaque {
+    color: #FFD700; /* Dourado para ênfase */
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    background: #FF6B35; /* Laranja para ação */
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 2rem 0;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05); /* Efeito de interação */
+}
