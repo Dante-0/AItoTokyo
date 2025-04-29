@@ -1,27 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automação com IA: Economize 20h/Semana Sem Programar</title>
-    <meta name="description" content="Método validado por 1.237 alunos: Automatize processos chatos com IA mesmo sem experiência técnica">
+    <title>AI Automation: Save 20h/Week Without Coding</title>
+    <meta name="description" content="Proven method: automate boring tasks with AI even without technical background">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Script Otimizado -->
+    <!-- Optimized Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const endTime = new Date().getTime() + 86400000; // 24h
+            // Countdown timer (24h)
+            const endTime = Date.now() + 86400000;
             function updateTimer() {
-                const now = new Date().getTime();
+                const now = Date.now();
                 const distance = endTime - now;
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                document.getElementById('timer').innerHTML =
-                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                document.getElementById('timer').textContent =
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                 requestAnimationFrame(updateTimer);
             }
             updateTimer();
+
+            // Student counter animation (+5 students every 3s)
+            const countEl = document.getElementById('studentCount');
+            let count = parseInt(countEl.textContent.replace(/,/g, ''), 10);
+            setInterval(() => {
+                count += 5;
+                countEl.textContent = count.toLocaleString();
+            }, 3000);
         });
     </script>
 </head>
@@ -29,77 +38,82 @@
     <section class="hero">
         <div class="hero-content">
             <div class="credibility-badges">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Google_News_icon.png" alt="Mídia" class="badge">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Parceiros" class="badge">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Google_News_icon.png" alt="Media" class="badge">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Partner" class="badge">
             </div>
-            <h1><span class="gradient-text">Automatize Tarefas Repetitivas</span> Usando IA em 57 Minutos</h1>
-            <p class="subtitle">De iniciante a especialista - método passo a passo</p>
-            <!-- Nova seção: vídeo público sobre automação de conteúdo -->
+            <h1><span class="gradient-text">Automate Repetitive Tasks</span> Using AI in 57 Minutes</h1>
+            <p class="subtitle">From Beginner to Expert – Step-by-Step Method</p>
+            <!-- Public AI automation video -->
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/duGOA6ZiGtE"
-                    title="How I Use AI to Automate Content Creation" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <iframe src="https://www.youtube-nocookie.com/embed/duGOA6ZiGtE" 
+                        title="How I Use AI to Automate Content Creation" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
             </div>
-            <!-- Nova seção: página criada por IA -->
+            <!-- AI-built indicator -->
             <div class="ai-built">
-                <img src="https://source.unsplash.com/_7lbxV7dgIM/900x400" alt="Robô montando aplicação" class="ai-built-img">
-                <p class="ai-built-text">Esta página foi criada 100% por Inteligência Artificial</p>
+                <img src="https://images.pexels.com/photos/5473953/pexels-photo-5473953.jpeg?auto=compress&cs=tinysrgb&w=1440" 
+                     alt="Robot building application" class="ai-built-img">
+                <p class="ai-built-text">This page was built entirely by Artificial Intelligence</p>
             </div>
-            <a href="#oferta" class="cta-button">Quero Acessar o Método Completo →</a>
+            <a href="#offer" class="cta-button">Get Full Access to the Method →</a>
             <div class="social-proof">
-                <div class="students-count">🎓 1.237 alunos matriculados</div>
-                <div class="timer">⏳ Oferta termina em: <span id="timer">24:00:00</span></div>
+                <div class="students-count">🎓 <span id="studentCount">1,237</span> students enrolled</div>
+                <div class="timer">⏳ Offer ends in: <span id="timer">24:00:00</span></div>
             </div>
         </div>
     </section>
 
     <section class="benefits">
-        <h2 class="section-title">O Sistema Completo Inclui:</h2>
+        <h2 class="section-title">The Complete System Includes:</h2>
         <div class="benefits-grid">
             <div class="benefit-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Meet_Icon_%28iOS%29.png" alt="Suporte" class="benefit-icon">
-                <h3>Suporte 24h via WhatsApp</h3>
-                <p>Tire dúvidas diretamente com nosso time técnico</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Meet_Icon_%28iOS%29.png" 
+                     alt="24/7 WhatsApp Support" class="benefit-icon">
+                <h3>24/7 WhatsApp Support</h3>
+                <p>Ask questions directly to our tech team</p>
             </div>
             <div class="benefit-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Documents_icon.png" alt="Certificado" class="benefit-icon">
-                <h3>Certificado Reconhecido</h3>
-                <p>Válido para horas complementares em universidades</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Documents_icon.png" 
+                     alt="Recognized Certificate" class="benefit-icon">
+                <h3>Recognized Certificate</h3>
+                <p>Valid for university credit hours</p>
             </div>
             <div class="benefit-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Vanamo_Logo.png" alt="Atualizações" class="benefit-icon">
-                <h3>Atualizações Vitalícias</h3>
-                <p>Novos fluxos de automação mensais</p>
-            </div>
-            <!-- Novo: Autoridade e confiança -->
-            <div class="benefit-card">
-                <img src="https://source.unsplash.com/YQ3_xq4VWNM/100x100" alt="Troféu" class="benefit-icon">
-                <h3>Autoridade Reconhecida</h3>
-                <p>Reconhecido por especialistas do mercado de IA</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Vanamo_Logo.png" 
+                     alt="Lifetime Updates" class="benefit-icon">
+                <h3>Lifetime Updates</h3>
+                <p>Monthly new automation workflows</p>
             </div>
             <div class="benefit-card">
-                <img src="https://source.unsplash.com/gOez03tUGCc/100x100" alt="Confiança" class="benefit-icon">
-                <h3>Confiança Garantida</h3>
-                <p>Parcerias com líderes e clientes satisfeitos</p>
+                <img src="https://images.pexels.com/photos/110854/pexels-photo-110854.jpeg?auto=compress&cs=tinysrgb&w=100" 
+                     alt="Trophy" class="benefit-icon">
+                <h3>Recognized Authority</h3>
+                <p>Endorsed by AI industry experts</p>
+            </div>
+            <div class="benefit-card">
+                <img src="https://images.pexels.com/photos/3184472/pexels-photo-3184472.jpeg?auto=compress&cs=tinysrgb&w=100" 
+                     alt="Handshake" class="benefit-icon">
+                <h3>Trusted Partnerships</h3>
+                <p>Partnered with industry leaders</p>
             </div>
         </div>
     </section>
 
-    <section class="pricing" id="oferta">
+    <section class="pricing" id="offer">
         <div class="price-container">
             <div class="price-header">
-                <span class="old-price">De R$ 1.497</span>
+                <span class="old-price">From $1,497</span>
                 <span class="discount">70% OFF</span>
             </div>
-            <div class="new-price">12x de R$ 44,90</div>
-            <div class="payment-warning">ou R$ 497 à vista</div>
+            <div class="new-price">12× $44.90</div>
+            <div class="payment-warning">or $497 one-time</div>
             <ul class="offer-details">
-                <li>✅ Acesso imediato às aulas</li>
-                <li>✅ Comunidade exclusiva</li>
-                <li>✅ Garantia de 7 dias</li>
+                <li>✅ Immediate access to lessons</li>
+                <li>✅ Exclusive community</li>
+                <li>✅ 7-day money-back guarantee</li>
             </ul>
-            <a href="https://app.hotmart.com/checkout/pay" class="cta-button">Garantir Meu Acesso Agora</a>
+            <a href="https://app.hotmart.com/checkout/pay" class="cta-button">Secure My Access Now</a>
         </div>
     </section>
 </body>
