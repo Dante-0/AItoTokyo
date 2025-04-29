@@ -28,7 +28,7 @@
             const countEl = document.getElementById('studentCount');
             let count = parseInt(countEl.textContent.replace(/,/g, ''), 10);
             setInterval(() => {
-                count += 5;
+                count += 2;
                 countEl.textContent = count.toLocaleString();
             }, 3000);
         });
